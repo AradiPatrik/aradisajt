@@ -1,0 +1,29 @@
+@import '~@angular/material/theming';
+
+:host {
+  flex-grow: 1;
+}
+
+.bdg {
+  align-items: center;
+}
+
+.badges {
+  flex-direction: row;
+  flex-grow: 1;
+  @include mat-elevation(1);
+  z-index: 4;
+}
+
+.badges mat-card-content {
+  flex-direction: row !important;
+  justify-content: space-around !important;
+  display: flex !important;
+  flex-wrap: wrap;
+}
+
+.badges div {
+  max-width: 300px;
+  text-align: center;
+  line-height: 1.6;
+}

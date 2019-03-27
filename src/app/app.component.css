@@ -1,0 +1,17 @@
+.app-container {
+}
+
+mat-toolbar {
+  position: fixed;
+  width: 100vw;
+  @include mat-elevation(4);
+  z-index: 8;
+}
+
+.mat-app-background {
+  flex-grow: 1;
+}
+
+.spacer {
+  flex-grow: 1;
+}

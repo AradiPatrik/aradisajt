@@ -1,0 +1,83 @@
+@import '~@angular/material/theming';
+
+:host {
+  flex-grow: 1;
+  display: block;
+}
+
+
+.landing {
+  background-image: linear-gradient(rgba(233, 233, 233, 0.98) 5%, #e2e2e2 70%, #fafafafa);
+  color: #f0f0f0;
+  align-items: center;
+  height: 100vh;
+}
+
+.buttons {
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.buttons button {
+  margin: 8px;
+}
+
+.about-card {
+  max-height: 700px;
+}
+
+.title {
+  text-align: center;
+  font-size: 3.125rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.heading {
+  flex-grow: 1;
+  height: 100%;
+  padding: 10px 40px;
+  align-items: center;
+  justify-content: center;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/aradisajt.appspot.com/o/cheese-gray-fullhd.png?alt=media&token=bb8bf498-d964-48d5-a589-84d7361434e6");
+  @include mat-elevation(2);
+  z-index: 6;
+}
+
+button {
+  display: flex;
+  flex-grow: 0;
+  align-items: center;
+  flex-shrink: 1;
+}
+
+#theSubheading {
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1.375rem;
+  font-weight: 300;
+}
+
+@media (min-width: 600px) {
+  .landing {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 338px) {
+  .heading {
+    padding: 0;
+  }
+}
+
+.extra-cards {
+  padding: 8px;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  // background-image: linear-gradient(rgba(233, 233, 233, 0.98) 5%, #e2e2e2 70%, #fafafafa);
+}

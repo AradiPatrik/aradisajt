@@ -1,0 +1,49 @@
+@import '~@angular/material/theming';
+
+:host {
+  padding: 8px;
+  flex-direction: row;
+}
+
+.about-card {
+  flex-grow: 1;
+}
+
+.lacko {
+  justify-content: space-around;
+  flex-grow: 1;
+}
+
+.vidi {
+  border-radius: 3px;
+  @include mat-elevation(1);
+  flex-grow: 2;
+  margin-top: 8px;
+  max-height: 80vh;
+}
+
+
+.header-image {
+  background-image: url("https://image.shutterstock.com/image-photo/casually-handsome-confident-young-man-260nw-439433326.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: -9px;
+}
+
+@media (min-width: 800px) {
+  .lacko {
+    flex-direction: row;
+  }
+
+  .vidi {
+    margin-top: 0;
+  }
+
+  .about-card {
+    max-width: 80vw;
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 799px) {
+}
