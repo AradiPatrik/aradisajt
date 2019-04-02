@@ -1,0 +1,12 @@
+<mat-card class="cheese-card" (click)="toggle()" style="padding-top: 0;">
+  <div class="valami" [@flyInOut]="state" [class.open]="state === 'open'">
+    <img mat-card-image src="http://csizsajtmuhely.hu/wp-content/uploads/2017/10/slider1.jpg"/>
+  </div>
+  <mat-card-title>
+    Paranyica
+  </mat-card-title>
+  <mat-card-content *ngIf="state === 'open'" @enterLeave id="asdf">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad commodi eligendi excepturi inventore, quibusdam tenetur
+    vel veritatis? Aperiam autem, commodi cumque deserunt ea facere nobis odit, quibusdam quos recusandae totam!
+  </mat-card-content>
+</mat-card>

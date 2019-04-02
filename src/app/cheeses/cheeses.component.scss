@@ -1,3 +1,33 @@
 :host {
   margin-top: 56px;
 }
+
+.cheese-cards {
+  padding-right: 8px;
+  padding-left: 8px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+  .cheese-card {
+    min-width: 30vw;
+    max-width: 30vw;
+  }
+}
+
+@media (min-width: 540px) {
+  :host {
+    margin-top: 64px;
+  }
+}
+
+@media (max-width: 540px) {
+  :host {
+    margin-top: 56px;
+  }
+}
+
+
+

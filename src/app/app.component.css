@@ -15,3 +15,7 @@ mat-toolbar {
 .spacer {
   flex-grow: 1;
 }
+
+:host {
+  min-height: 100vh;
+}

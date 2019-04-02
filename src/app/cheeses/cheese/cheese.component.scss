@@ -1,0 +1,30 @@
+.cheese-card {
+  flex-grow: 1;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-top: 16px;
+  max-width: 500px;
+  flex-basis: 33%;
+  cursor: pointer;
+  overflow: hidden;
+  transition: height 800ms;
+  max-height: 340px;
+}
+
+.valami {
+  overflow: hidden;
+  width: calc(100% + 32px);
+  margin: 0 -16px 0px -16px;
+  margin-top: -16px;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.open {
+  margin: 0 -16px 16px -16px;
+}
+
+#asdf {
+  transition: height 800ms;
+  overflow: hidden;
+}

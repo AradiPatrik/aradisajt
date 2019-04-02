@@ -12,7 +12,8 @@ import {
   MatListModule,
   MatMenuModule,
   MatSidenavModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatExpansionModule
 } from '@angular/material';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {LandingPageComponent} from './landing-page/landing-page.component';
@@ -24,6 +25,7 @@ import {VgCoreModule} from 'videogular2/core';
 import {VgOverlayPlayModule} from 'videogular2/overlay-play';
 import {CheesesComponent} from './cheeses/cheeses.component';
 import {AppRoutingModule} from './app-routing.module';
+import { CheeseComponent } from './cheeses/cheese/cheese.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import {AppRoutingModule} from './app-routing.module';
     LandingPageComponent,
     BadgesComponent,
     LackoComponent,
-    CheesesComponent
+    CheesesComponent,
+    CheeseComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +53,7 @@ import {AppRoutingModule} from './app-routing.module';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
+    MatExpansionModule,
     AppRoutingModule
   ],
   providers: [],
