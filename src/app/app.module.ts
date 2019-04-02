@@ -22,6 +22,8 @@ import {VgBufferingModule} from 'videogular2/buffering';
 import {VgControlsModule} from 'videogular2/controls';
 import {VgCoreModule} from 'videogular2/core';
 import {VgOverlayPlayModule} from 'videogular2/overlay-play';
+import {CheesesComponent} from './cheeses/cheeses.component';
+import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import {VgOverlayPlayModule} from 'videogular2/overlay-play';
     DashboardComponent,
     LandingPageComponent,
     BadgesComponent,
-    LackoComponent
+    LackoComponent,
+    CheesesComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import {VgOverlayPlayModule} from 'videogular2/overlay-play';
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

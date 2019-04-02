@@ -1,5 +1,6 @@
-import {Component, HostListener} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {ToolbarService} from './toolbar.service';
 
 @Component({
   selector: 'app-root',
@@ -18,17 +19,27 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
     ])
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   state = 'hide';
+  toolbarCanBeTranslucent = true;
+
+  constructor(private toolbarService: ToolbarService) {
+  }
+
+  ngOnInit() {
+    this.toolbarService.shouldShowToolbarTranslucent$.subscribe(isTranslucent => {
+      this.state = isTranslucent ? 'hide' : 'show';
+      this.toolbarCanBeTranslucent = isTranslucent;
+    });
+  }
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
     const scrollPosition = window.pageYOffset;
-
     if (scrollPosition > 10) {
       this.state = 'show';
     } else {
-      this.state = 'hide';
+      this.state = this.toolbarCanBeTranslucent ? 'hide' : 'show';
     }
   }
 }

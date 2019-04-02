@@ -1,4 +1,5 @@
 import {Component, ElementRef, HostListener, OnInit} from '@angular/core';
+import {ToolbarService} from '../toolbar.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -7,14 +8,10 @@ import {Component, ElementRef, HostListener, OnInit} from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor(private elementRef: ElementRef) {
+  constructor(private toolbarService: ToolbarService) {
   }
 
   ngOnInit() {
-  }
-
-  @HostListener('window:scroll', ['$event'])
-  checkScroll(event) {
-
+    this.toolbarService.hideToolbar();
   }
 }

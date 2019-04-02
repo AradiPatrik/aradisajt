@@ -2,10 +2,10 @@
 <mat-toolbar color="primary" [class.mat-elevation-z2]="state !== 'hide'" [@scrollAnimation]="state" id="theToolbar">
   <span>Aradi Sajt</span>
   <span class="spacer"></span>
-  <button mat-button>SAJTOK</button>
+  <button mat-button routerLink="cheeses">SAJTOK</button>
   <button mat-button>ROLUNK</button>
 </mat-toolbar>
 <div class="mat-app-background">
-  <app-landing-page></app-landing-page>
+  <router-outlet></router-outlet>
 </div>
 
